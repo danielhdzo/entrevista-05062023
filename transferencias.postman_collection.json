@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "b60ce6d6-a9ad-40ec-88f7-7634b9950497",
+		"name": "transferencias",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "transfiereFondos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 1000.00,\r\n    \"currency\": \"USD\",\r\n    \"origin_account\": \"1111\",\r\n    \"destination_account\": \"2222\",\r\n    \"description\": \"Transferencia de prueba\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bank/api/v1/transferencia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bank",
+						"api",
+						"v1",
+						"transferencia"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultaSaldo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bank/api/v1/cuentas/fondos/1111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bank",
+						"api",
+						"v1",
+						"cuentas",
+						"fondos",
+						"1111"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
